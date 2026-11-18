@@ -14,32 +14,31 @@ var iArgs=document.getElementById('iArgs');
 selectZip.addEventListener('change', function(){
 	if(selectZip.value=="halva_en.zip")
 	{
-		alert('Bugs: menu lagging.');
-		iArgs.value="-dev 1 -game valve";
-	}
-	else if(selectZip.value=="blue_shift_en.zip")
-	{
-		alert('Bugs: Sometimes needs noclip, because you can\'t pick armor');
-		iArgs.value="-dev 1 -game valve";
-	}
-	else if(selectZip.value=="opposing_force_en.zip")
-	{
-		alert('Bugs: Menu lagging, doesn\'t spawn NPCs (because old xash version).');
-		iArgs.value="-dev 1 -game gearbox";
-	}
-	else if(selectZip.value=="halva_rus.zip")
-	{
-		alert('Bugs: No bugs.');
+		alert('Known issue: menu may lag.');
 		iArgs.value="-dev 1 -game valve";
 	}
 	else if(selectZip.value=="blue_shift_rus.zip")
 	{
-		alert('Bugs: Sometimes needs noclip, because you can\'t pick armor');
+		alert('Known issue: armor pickup may require noclip.');
+		iArgs.value="-dev 1 -game valve";
+	}
+	else if(selectZip.value=="opposing_force_en.zip")
+	{
+		alert('Known issue: this bundled older engine build may fail to spawn some NPCs.');
+		iArgs.value="-dev 1 -game gearbox";
+	}
+	else if(selectZip.value=="halva_rus.zip")
+	{
+		iArgs.value="-dev 1 -game valve";
+	}
+	else if(selectZip.value=="blue_shift_rus.zip")
+	{
+		alert('Known issue: armor pickup may require noclip.');
 		iArgs.value="-dev 1 -game valve";
 	}
 	else if(selectZip.value=="opposing_force_rus.zip")
 	{
-		alert('Bugs: Doesn\'t spawn NPCs (because old xash version).');
-		iArgs.value="-dev 1 -game valve";
+		alert('Known issue: this bundled older engine build may fail to spawn some NPCs.');
+		iArgs.value="-dev 1 -game gearbox";
 	}
 });
