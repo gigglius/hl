@@ -1,9 +1,9 @@
 zipMods = [
 ['halva_en.zip', 'Half-Life EN (214M)', 214283501],
-['blue_shift_rus.zip', 'Blue Shift EN (221M)', 221191140],
+['blue_shift_en.zip', 'Blue Shift EN (221M)', 221191140],
 ['opposing_force_en.zip', 'Opposing Force EN (221M)', 221191140],
 ['halva_rus.zip', 'Half-Life RUS (304M)', 303881453],
-['blue_shift_rus.zip', 'Blue Shift RUS (223M)', 223479923],
+['blue_shift_rus.zip', 'Blue Shift RUS (224M)', 223479923],
 ['opposing_force_rus.zip', 'Opposing Force RUS (224M)', 223479923]
 ];
 
@@ -17,10 +17,10 @@ selectZip.addEventListener('change', function(){
 		alert('Known issue: menu may lag.');
 		iArgs.value="-dev 1 -game valve";
 	}
-	else if(selectZip.value=="blue_shift_rus.zip")
+	else if(selectZip.value=="blue_shift_en.zip" || selectZip.value=="blue_shift_rus.zip")
 	{
-		alert('Known issue: armor pickup may require noclip.');
-		iArgs.value="-dev 1 -game valve";
+		// Blue Shift is installed in the bshift directory.
+		iArgs.value="-dev 1 -game bshift";
 	}
 	else if(selectZip.value=="opposing_force_en.zip")
 	{
@@ -29,11 +29,6 @@ selectZip.addEventListener('change', function(){
 	}
 	else if(selectZip.value=="halva_rus.zip")
 	{
-		iArgs.value="-dev 1 -game valve";
-	}
-	else if(selectZip.value=="blue_shift_rus.zip")
-	{
-		alert('Known issue: armor pickup may require noclip.');
 		iArgs.value="-dev 1 -game valve";
 	}
 	else if(selectZip.value=="opposing_force_rus.zip")
